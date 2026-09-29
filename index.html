@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Chandra 🌙</title>
+
+<style>
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#02030d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   GALAXY BACKGROUND
+========================================================= */
+
+body{
+    background:
+        radial-gradient(circle at 20% 20%, #34206b55, transparent 25%),
+        radial-gradient(circle at 80% 30%, #182e7055, transparent 25%),
+        radial-gradient(circle at 50% 80%, #54175c44, transparent 30%),
+        linear-gradient(180deg,#01020a,#050718,#02030d);
+}
+
+/* =========================================================
+   STAR FIELD
+========================================================= */
+
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    z-index:-2;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    0%{
+        opacity:.15;
+        transform:scale(.5);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+
+}
+
+/* =========================================================
+   SHOOTING STARS
+========================================================= */
+
+.shooting-star{
+    position:fixed;
+    width:120px;
+    height:2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        white
+    );
+    transform:rotate(-35deg);
+    opacity:0;
+    z-index:-1;
+    animation:shoot 5s linear infinite;
+}
+
+@keyframes shoot{
+
+    0%{
+        left:100%;
+        top:5%;
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    30%{
+        left:-20%;
+        top:45%;
+        opacity:0;
+    }
+
+    100%{
+        left:-20%;
+        top:45%;
+        opacity:0;
+    }
+
+}
+
+/* =========================================================
+   INTRO SCREEN
+========================================================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1a1644,
+            #03030c 70%
+        );
+
+    transition:1.2s;
+}
+
+.intro-moon{
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #e8e8ee 45%,
+            #a9a9ba 100%
+        );
+
+    box-shadow:
+        0 0 30px #ffffff99,
+        0 0 80px #aeb8ff66,
+        0 0 150px #777dff33;
+
+    animation:moonFloat 4s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+.intro-title{
+    margin-top:35px;
+
+    font-size:
+        clamp(38px,8vw,80px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c7cfff,
+            #ffffff,
+            #9eaaff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:gradientMove 5s infinite;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    50%{
+        background-position:100%;
+    }
+
+    100%{
+        background-position:0%;
+    }
+
+}
+
+.intro-text{
+    margin-top:15px;
+    color:#bbb;
+    font-size:18px;
+}
+
+.start-btn{
+    margin-top:35px;
+
+    padding:16px 35px;
+
+    border:none;
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #756cff,
+            #c18cff
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 20px #766cff88,
+        0 0 50px #766cff44;
+
+    transition:.4s;
+}
+
+.start-btn:hover{
+    transform:scale(1.1);
+    box-shadow:
+        0 0 30px #ffffff88,
+        0 0 80px #766cff88;
+}
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-btn{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:58px;
+    height:58px;
+
+    border:none;
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #625bff,
+            #ba7dff
+        );
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:600;
+
+    box-shadow:
+        0 0 20px #726cff88;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    padding:30px;
+}
+
+.hero-content{
+    max-width:1000px;
+}
+
+.moon{
+    width:
+        clamp(170px,25vw,280px);
+
+    height:
+        clamp(170px,25vw,280px);
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #eeeeee 40%,
+            #b6b6c2 75%,
+            #858592
+        );
+
+    box-shadow:
+        0 0 35px #ffffffaa,
+        0 0 100px #b8c2ff77,
+        0 0 180px #8996ff44;
+
+    animation:
+        moonFloat 5s ease-in-out infinite;
+
+    position:relative;
+}
+
+/* Moon craters */
+
+.crater{
+    position:absolute;
+    border-radius:50%;
+    background:#9999a6;
+    opacity:.35;
+}
+
+.crater.one{
+    width:35px;
+    height:35px;
+    top:30%;
+    left:25%;
+}
+
+.crater.two{
+    width:20px;
+    height:20px;
+    top:55%;
+    left:60%;
+}
+
+.crater.three{
+    width:45px;
+    height:45px;
+    top:65%;
+    left:25%;
+}
+
+.crater.four{
+    width:18px;
+    height:18px;
+    top:20%;
+    left:65%;
+}
+
+.hero-small{
+    margin-top:45px;
+
+    letter-spacing:5px;
+
+    color:#aaa;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+}
+
+.hero h1{
+    margin-top:20px;
+
+    font-size:
+        clamp(50px,11vw,125px);
+
+    line-height:.9;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #bfc8ff,
+            #ffffff,
+            #c28cff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:gradientMove 5s infinite;
+}
+
+.hero h2{
+    margin-top:25px;
+
+    font-size:
+        clamp(25px,5vw,45px);
+
+    font-weight:400;
+
+    color:#e6e6ee;
+}
+
+.hero p{
+    margin-top:20px;
+
+    color:#aaa;
+
+    font-size:18px;
+}
+
+.scroll{
+    margin-top:55px;
+
+    color:#777;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    50%{
+        transform:translateY(10px);
+    }
+
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:100px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:
+        clamp(35px,7vw,65px);
+
+    margin-bottom:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #b9c4ff,
+            #ffffff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.section-subtitle{
+    color:#888;
+    margin-bottom:60px;
+    font-size:17px;
+}
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.photo-wrapper{
+    display:flex;
+    justify-content:center;
+    perspective:1200px;
+}
+
+.photo-card{
+    width:
+        min(350px,85vw);
+
+    padding:10px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #8792ff,
+            #c58aff,
+            #ffffff
+        );
+
+    box-shadow:
+        0 0 30px #8792ff55,
+        0 0 80px #c58aff33;
+
+    animation:
+        photoFloat 5s ease-in-out infinite;
+
+    transform-style:preserve-3d;
+}
+
+.photo-card img{
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:
+            rotateY(-8deg)
+            rotateX(4deg)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            rotateY(8deg)
+            rotateX(-4deg)
+            translateY(-15px);
+    }
+
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message-box{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:
+        clamp(30px,6vw,60px);
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 20px 80px #00000088;
+
+    text-align:left;
+}
+
+.message-box p{
+    color:#ddd;
+
+    font-size:
+        clamp(17px,2vw,20px);
+
+    line-height:2;
+}
+
+/* =========================================================
+   MOON QUOTE
+========================================================= */
+
+.moon-quote{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px 30px;
+
+    position:relative;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(105,116,255,.07)
+        );
+
+    border:
+        1px solid #ffffff12;
+}
+
+.moon-quote .mini-moon{
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            white,
+            #aaa
+        );
+
+    box-shadow:
+        0 0 30px #ffffff77;
+}
+
+.moon-quote h3{
+    margin-top:30px;
+
+    font-size:
+        clamp(25px,5vw,45px);
+
+    font-weight:400;
+
+    line-height:1.4;
+}
+
+.moon-quote span{
+    display:block;
+
+    margin-top:25px;
+
+    color:#888;
+}
+
+/* =========================================================
+   QUOTES GRID
+========================================================= */
+
+.quotes{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px,1fr)
+        );
+
+    gap:25px;
+}
+
+.quote{
+    padding:35px 25px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid #ffffff12;
+
+    transition:.4s;
+}
+
+.quote:hover{
+    transform:
+        translateY(-12px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 60px #777cff33;
+}
+
+.quote-icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.quote p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* =========================================================
+   MOON PHASES
+========================================================= */
+
+.phases{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    margin-top:50px;
+}
+
+.phase{
+    text-align:center;
+}
+
+.phase-moon{
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    margin-bottom:12px;
+
+    box-shadow:
+        0 0 15px #ffffff44;
+}
+
+.new{
+    background:#11121c;
+}
+
+.crescent{
+    background:
+        radial-gradient(
+            circle at 60% 50%,
+            transparent 48%,
+            #eee 50%
+        );
+}
+
+.half{
+    background:
+        linear-gradient(
+            90deg,
+            #eee 50%,
+            #20212b 50%
+        );
+}
+
+.full{
+    background:#eee;
+
+    box-shadow:
+        0 0 30px #ffffff99;
+}
+
+.phase span{
+    color:#777;
+    font-size:13px;
+}
+
+/* =========================================================
+   GIFT
+========================================================= */
+
+.gift-section{
+    flex-direction:column;
+}
+
+.gift{
+    position:relative;
+
+    width:190px;
+    height:170px;
+
+    margin:40px auto;
+
+    cursor:pointer;
+}
+
+.gift-box{
+    position:absolute;
+
+    bottom:0;
+
+    width:180px;
+    height:110px;
+
+    left:5px;
+
+    border-radius:8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #646cff,
+            #b77cff
+        );
+
+    box-shadow:
+        0 20px 50px #747cff55;
+}
+
+.gift-box::before{
+    content:"";
+
+    position:absolute;
+
+    left:76px;
+
+    width:28px;
+    height:100%;
+
+    background:#eee;
+}
+
+.gift-lid{
+    position:absolute;
+
+    width:200px;
+    height:38px;
+
+    left:-5px;
+    top:30px;
+
+    z-index:2;
+
+    border-radius:8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #747cff,
+            #ca82ff
+        );
+
+    transition:.8s;
+}
+
+.gift-lid::after{
+    content:"";
+
+    position:absolute;
+
+    left:85px;
+
+    width:28px;
+    height:38px;
+
+    background:#eee;
+}
+
+.gift:hover .gift-lid{
+    transform:
+        translateY(-55px)
+        rotate(-7deg);
+}
+
+.gift-label{
+    color:#888;
+    margin-top:20px;
+}
+
+/* =========================================================
+   SURPRISE MODAL
+========================================================= */
+
+#surprise{
+    position:fixed;
+
+    inset:0;
+
+    z-index:900;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(0,0,15,.95);
+
+    text-align:center;
+}
+
+.surprise-box{
+    width:100%;
+    max-width:850px;
+
+    padding:
+        clamp(35px,7vw,70px)
+        30px;
+
+    border-radius:35px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #29265e,
+            #070814
+        );
+
+    border:
+        1px solid #ffffff20;
+
+    box-shadow:
+        0 0 100px #777cff44;
+
+    animation:
+        popup .8s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.surprise-moon{
+    width:100px;
+    height:100px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            white,
+            #aaa
+        );
+
+    box-shadow:
+        0 0 50px #ffffffaa;
+}
+
+.surprise-box h2{
+    margin-top:30px;
+
+    font-size:
+        clamp(35px,8vw,75px);
+
+    background:
+        linear-gradient(
+            90deg,
+            white,
+            #bbc5ff,
+            white
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.surprise-box p{
+    margin-top:25px;
+
+    color:#ccc;
+
+    font-size:19px;
+
+    line-height:1.9;
+}
+
+.close-btn{
+    margin-top:35px;
+
+    padding:13px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#111;
+
+    font-size:15px;
+}
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.heart{
+    position:fixed;
+
+    bottom:-50px;
+
+    z-index:50;
+
+    pointer-events:none;
+
+    animation:
+        floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+
+    to{
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+.firework{
+    position:fixed;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:1200;
+
+    animation:
+        explode 1.2s ease-out forwards;
+}
+
+@keyframes explode{
+
+    0%{
+        transform:translate(0,0) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translate(
+                calc((var(--x) - .5) * 600px),
+                calc((var(--y) - .5) * 600px)
+            )
+            scale(0);
+
+        opacity:0;
+    }
+
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:70px 20px;
+
+    text-align:center;
+
+    color:#666;
+}
+
+.signature{
+    margin-top:15px;
+
+    color:#aaa;
+
+    font-size:20px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .message-box{
+        padding:25px;
+    }
+
+    .message-box p{
+        line-height:1.8;
+    }
+
+    .hero-small{
+        letter-spacing:3px;
+    }
+
+    .phases{
+        gap:20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ========================================================
+     INTRO
+========================================================= -->
+
+<div id="intro">
+
+    <div class="intro-moon">
+
+    </div>
+
+    <div class="intro-title">
+        For Chandra 🌙
+    </div>
+
+    <div class="intro-text">
+        A little birthday universe created just for you...
+    </div>
+
+    <button
+        class="start-btn"
+        onclick="startExperience()"
+    >
+        🌙 Enter Her Moonlight
+    </button>
+
+</div>
+
+
+<!-- ========================================================
+     MUSIC
+========================================================= -->
+
+<audio id="music" loop>
+
+    <source
+        src="birthday-song.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+    id="musicButton"
+>
+    🎵
+</button>
+
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="moon">
+
+            <div class="crater one"></div>
+            <div class="crater two"></div>
+            <div class="crater three"></div>
+            <div class="crater four"></div>
+
+        </div>
+
+        <div class="hero-small">
+            A birthday message written under the stars
+        </div>
+
+        <h1>
+            HAPPY<br>
+            BIRTHDAY
+        </h1>
+
+        <h2>
+            Chandra 🌙
+        </h2>
+
+        <p>
+            A name that means Moon...
+            and a person worth celebrating. ✨
+        </p>
+
+        <div class="scroll">
+            ↓ Scroll down slowly ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     PHOTO
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            The Face Behind The Moonlight 📸
+        </h2>
+
+        <p class="section-subtitle">
+            One picture. A thousand memories.
+        </p>
+
+        <div class="photo-wrapper">
+
+            <div class="photo-card">
+
+                <img
+                    src="chandra.jpg"
+                    alt="Chandra"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     MESSAGE
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            A Message For You 💌
+        </h2>
+
+        <p class="section-subtitle">
+            Read it slowly...
+        </p>
+
+        <div class="message-box">
+
+            <p id="typewriter"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     MOON QUOTE
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="moon-quote">
+
+            <div class="mini-moon"></div>
+
+            <h3>
+                “The moon doesn't try to outshine
+                the stars. It simply shines in its
+                own beautiful way.”
+            </h3>
+
+            <span>
+                Just like you, Chandra. 🌙
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     QUOTES
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Words For Chandra ✨
+        </h2>
+
+        <p class="section-subtitle">
+            A few thoughts for your special day.
+        </p>
+
+
+        <div class="quotes">
+
+
+            <div class="quote">
+
+                <div class="quote-icon">
+                    🌙
+                </div>
+
+                <p>
+                    “Some people enter our lives
+                    like moonlight through a window —
+                    quietly, softly,
+                    and somehow making everything brighter.”
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <div class="quote-icon">
+                    ✨
+                </div>
+
+                <p>
+                    “A beautiful friendship isn't about
+                    being together every moment.
+                    It's about knowing the connection
+                    remains even when life gets busy.”
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <div class="quote-icon">
+                    🌌
+                </div>
+
+                <p>
+                    “May your future be filled with
+                    places you've never seen,
+                    dreams you've never imagined,
+                    and happiness you never expected.”
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <div class="quote-icon">
+                    💫
+                </div>
+
+                <p>
+                    “Keep your smile,
+                    protect your peace,
+                    chase your dreams,
+                    and never forget how special you are.”
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     MOON PHASES
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Like The Moon 🌙
+        </h2>
+
+        <p class="section-subtitle">
+            Every phase is beautiful.
+        </p>
+
+
+        <div class="phases">
+
+
+            <div class="phase">
+
+                <div class="phase-moon new"></div>
+
+                <span>
+                    New Moon
+                </span>
+
+            </div>
+
+
+            <div class="phase">
+
+                <div class="phase-moon crescent"></div>
+
+                <span>
+                    Crescent
+                </span>
+
+            </div>
+
+
+            <div class="phase">
+
+                <div class="phase-moon half"></div>
+
+                <span>
+                    Half Moon
+                </span>
+
+            </div>
+
+
+            <div class="phase">
+
+                <div class="phase-moon full"></div>
+
+                <span>
+                    Full Moon
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="message-box"
+             style="margin-top:60px;text-align:center;">
+
+            <p>
+                Life will have different phases too.
+                Some days will feel bright.
+                Some will feel difficult.
+                But every phase is part of the story.
+                <br><br>
+                So keep going, Chandra.
+                Your brightest nights are still ahead. 🌙✨
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     GIFT
+========================================================= -->
+
+<section class="gift-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            One Last Surprise 🎁
+        </h2>
+
+        <p class="section-subtitle">
+            You've reached the end...
+            or maybe not. 😉
+        </p>
+
+
+        <div
+            class="gift"
+            onclick="openGift()"
+        >
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box"></div>
+
+        </div>
+
+
+        <div class="gift-label">
+            🎁 Click the gift
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p>
+        Made under the moonlight,
+        with a little bit of code and a lot of memories. 🌙
+    </p>
+
+    <div class="signature">
+        — Guru ❤️
+    </div>
+
+</footer>
+
+
+<!-- ========================================================
+     FINAL SURPRISE
+========================================================= -->
+
+<div id="surprise">
+
+    <div class="surprise-box">
+
+        <div class="surprise-moon"></div>
+
+
+        <h2>
+            Happy Birthday,
+            Chandra 🌙
+        </h2>
+
+
+        <p>
+            Your name means Moon.
+        </p>
+
+
+        <p>
+            And just like the moon quietly lights
+            up the night, some people have a way
+            of making ordinary moments feel
+            a little more special.
+        </p>
+
+
+        <p>
+            I hope this new chapter brings you
+            happiness that stays,
+            dreams that come true,
+            adventures worth remembering,
+            and people who always remind you
+            how valuable you are.
+        </p>
+
+
+        <p>
+            Keep smiling.
+            Keep dreaming.
+            Keep shining in your own way.
+        </p>
+
+
+        <p>
+            The stars can have the sky...
+            but tonight, this moon gets the spotlight. 🌙✨
+        </p>
+
+
+        <p>
+            Happy Birthday, Chandra. ❤️
+        </p>
+
+
+        <button
+            class="close-btn"
+            onclick="closeSurprise()"
+        >
+            🌙 Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   CREATE STARS
+========================================================= */
+
+for(let i=0;i<160;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"vw";
+
+    star.style.top =
+        Math.random()*100+"vh";
+
+    star.style.animationDelay =
+        Math.random()*4+"s";
+
+    star.style.width =
+        (1+Math.random()*3)+"px";
+
+    star.style.height =
+        star.style.width;
+
+    document.body.appendChild(star);
+
+}
+
+
+/* =========================================================
+   SHOOTING STARS
+========================================================= */
+
+for(let i=0;i<5;i++){
+
+    const shooting =
+        document.createElement("div");
+
+    shooting.className="shooting-star";
+
+    shooting.style.animationDelay =
+        (Math.random()*8)+"s";
+
+    document.body.appendChild(shooting);
+
+}
+
+
+/* =========================================================
+   START EXPERIENCE
+========================================================= */
+
+function startExperience(){
+
+    const intro =
+        document.getElementById("intro");
+
+    intro.style.opacity="0";
+
+
+    setTimeout(()=>{
+
+        intro.style.display="none";
+
+    },1200);
+
+
+    const music =
+        document.getElementById("music");
+
+
+    music.play().catch(()=>{
+
+        console.log(
+            "Music will start after user interaction."
+        );
+
+    });
+
+
+    createHearts();
+
+    typeWriter();
+
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.getElementById("musicButton");
+
+
+    if(music.paused){
+
+        music.play();
+
+        button.innerHTML="🎵";
+
+    }else{
+
+        music.pause();
+
+        button.innerHTML="🔇";
+
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+function createHearts(){
+
+    setInterval(()=>{
+
+        const heart =
+            document.createElement("div");
+
+        heart.className="heart";
+
+
+        const symbols=[
+            "❤️",
+            "🤍",
+            "💜",
+            "💙",
+            "🌙",
+            "✨",
+            "⭐"
+        ];
+
+
+        heart.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+
+        heart.style.fontSize =
+            (15+Math.random()*25)+"px";
+
+
+        heart.style.animationDuration =
+            (6+Math.random()*5)+"s";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },11000);
+
+
+    },700);
+
+}
+
+
+/* =========================================================
+   TYPEWRITER
+========================================================= */
+
+const message = `Hey Chandra 🌙❤️
+
+Your name means Moon...
+
+And somehow, that feels perfect.
+
+Because just like the moon quietly lights up
+the darkest nights, some people have a way of
+making ordinary moments feel a little brighter.
+
+Today is your day.
+
+So here's wishing you a year filled with
+beautiful memories, unexpected happiness,
+big dreams, peaceful nights,
+and countless reasons to smile.
+
+Thank you for being a genuinely special friend
+and for being part of so many good memories.
+
+Some friendships don't need a perfect explanation.
+
+They simply become special.
+
+And I'm genuinely grateful for ours.
+
+May this birthday be the beginning
+of one of the happiest chapters of your life.
+
+Keep smiling.
+Keep dreaming.
+Keep shining.
+
+Happy Birthday, Chandra. 🎂🌙❤️`;
+
+let typeIndex=0;
+
+function typeWriter(){
+
+    const element =
+        document.getElementById("typewriter");
+
+
+    function write(){
+
+        if(typeIndex < message.length){
+
+            const character =
+                message.charAt(typeIndex);
+
+
+            if(character === "\n"){
+
+                element.innerHTML += "<br>";
+
+            }else{
+
+                element.innerHTML += character;
+
+            }
+
+
+            typeIndex++;
+
+            setTimeout(write,32);
+
+        }
+
+    }
+
+
+    write();
+
+}
+
+
+/* =========================================================
+   OPEN GIFT
+========================================================= */
+
+function openGift(){
+
+    const surprise =
+        document.getElementById("surprise");
+
+
+    surprise.style.display="flex";
+
+
+    launchFireworks();
+
+}
+
+
+/* =========================================================
+   CLOSE SURPRISE
+========================================================= */
+
+function closeSurprise(){
+
+    document.getElementById(
+        "surprise"
+    ).style.display="none";
+
+}
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+function launchFireworks(){
+
+    for(let i=0;i<120;i++){
+
+        const particle =
+            document.createElement("div");
+
+
+        particle.className="firework";
+
+
+        const x =
+            30+Math.random()*40;
+
+        const y =
+            25+Math.random()*40;
+
+
+        particle.style.left =
+            x+"vw";
+
+        particle.style.top =
+            y+"vh";
+
+
+        particle.style.setProperty(
+            "--x",
+            Math.random()
+        );
+
+
+        particle.style.setProperty(
+            "--y",
+            Math.random()
+        );
+
+
+        const colors=[
+            "#ffffff",
+            "#aab6ff",
+            "#c98cff",
+            "#75d9ff",
+            "#ffd76a"
+        ];
+
+
+        particle.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+
+        document.body.appendChild(
+            particle
+        );
+
+
+        setTimeout(()=>{
+
+            particle.remove();
+
+        },1300);
+
+    }
+
+}
+
+
+/* =========================================================
+   CLICK SPARKLES
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(e){
+
+        for(let i=0;i<7;i++){
+
+            const sparkle =
+                document.createElement("div");
+
+
+            sparkle.innerHTML="✨";
+
+
+            sparkle.style.position="fixed";
+
+            sparkle.style.left =
+                e.clientX+"px";
+
+            sparkle.style.top =
+                e.clientY+"px";
+
+
+            sparkle.style.pointerEvents="none";
+
+            sparkle.style.zIndex="2000";
+
+
+            sparkle.style.fontSize =
+                (10+Math.random()*18)+"px";
+
+
+            sparkle.animate(
+
+                [
+
+                    {
+                        transform:
+                            "translate(0,0) scale(1)",
+                        opacity:1
+                    },
+
+                    {
+                        transform:
+                            `translate(
+                                ${(Math.random()-.5)*180}px,
+                                ${(Math.random()-.5)*180}px
+                            )
+                            scale(0)`,
+
+                        opacity:0
+                    }
+
+                ],
+
+                {
+                    duration:900,
+                    easing:"ease-out"
+                }
+
+            );
+
+
+            document.body.appendChild(
+                sparkle
+            );
+
+
+            setTimeout(()=>{
+
+                sparkle.remove();
+
+            },900);
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PHOTO 3D MOUSE EFFECT
+========================================================= */
+
+const photoCard =
+    document.querySelector(".photo-card");
+
+
+document.addEventListener(
+    "mousemove",
+    function(e){
+
+        if(!photoCard){
+            return;
+        }
+
+
+        const x =
+            (window.innerWidth/2-e.clientX)/30;
+
+        const y =
+            (window.innerHeight/2-e.clientY)/30;
+
+
+        photoCard.style.transform =
+            `rotateY(${-x}deg)
+             rotateX(${y}deg)`;
+
+    }
+);
+
+
+/* =========================================================
+   RESET PHOTO WHEN MOUSE LEAVES
+========================================================= */
+
+document.addEventListener(
+    "mouseleave",
+    function(){
+
+        if(photoCard){
+
+            photoCard.style.transform =
+                "rotateY(0deg) rotateX(0deg)";
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
